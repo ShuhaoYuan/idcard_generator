@@ -9,6 +9,8 @@ import PIL.Image as PImage
 import cv2
 import numpy
 from PIL import ImageFont, ImageDraw
+import os
+import sys
 
 from idcard_generator import id_card_utils, name_utils, utils, loading_alert
 
@@ -212,7 +214,7 @@ class IDGen:
     def run(self):
         root = tkinter.Tk()
         self.show_ui(root)
-        ico_path = os.path.join(asserts_dir, 'ico.ico')
-        root.iconbitmap(ico_path)
+        # ico_path = os.path.join(asserts_dir, 'ico.ico')
+        # root.iconbitmap(ico_path)
         root.protocol('WM_DELETE_WINDOW', lambda: sys.exit(0))
         root.mainloop()
